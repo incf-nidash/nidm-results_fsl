@@ -69,7 +69,7 @@ class FSLtoNIDMExporter(NIDMExporter, object):
         try:
             super(FSLtoNIDMExporter, self).__init__(version, out_dir, zipped)
             # Check if feat_dir exists
-            print("Exporting NIDM results from "+feat_dir)
+            print("Exporting NIDM results from "+feat_dir, file=sys.stderr)
             if not os.path.isdir(feat_dir):
                 raise Exception("Unknown directory: "+str(feat_dir))
             self.feat_dir = feat_dir
